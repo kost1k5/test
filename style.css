@@ -1,0 +1,135 @@
+
+:root {
+  --primary-color:#F8AD1F;
+  --primary-gray:#8e9398;
+}
+ .logo{
+    width: 80px;
+ }
+.header-label {
+  color: #33333399;
+}
+.header-bottom-menu{
+    background-color: #1A1919;
+    font-size: 18px;
+}
+.menu-button {
+  background-color: transparent !important;
+  border: none !important;
+  padding: 0 !important; 
+  font-size: 18px !important;
+  margin-right: 40px;
+}
+
+
+.menu-button::after {
+  display: none !important;
+}
+
+
+.menu-button:focus {
+  box-shadow: none !important; 
+}
+
+.menu-button:hover {
+  background-color: rgba(0, 0, 0, 0.05) !important; 
+}
+.btn-primary{
+    background-color: var(--primary-color);
+    border-radius: 20px;
+    font-size: 18px;
+    padding: 10px;
+    width: 200px;
+    border: none;
+    outline: none;
+}
+.popular-special-equipment {
+   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/background-traktor.png"); /* Убедитесь, что путь правильный */
+    min-height: 758px; 
+  
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #00000080;
+}
+
+.title-primary{
+    color: var(--primary-color);
+    font-size: 14px;
+}
+.subtitle{
+    font-size: 40px;
+    max-width: 637px;
+    line-height: 120%;
+} 
+.our-offers{
+    color: var(--primary-gray);
+    font-size: 18px;
+    max-width: 637px;
+}
+
+.price{
+    font-size: 18px;
+}
+.cards-right-blur {
+    background: rgba(43, 43, 43, 0.4); 
+    backdrop-filter: blur(10px);        
+    border-radius: 16px; 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    padding: 20px;
+    color: white; 
+    max-width: 280px; 
+}
+
+/* Стили для иконки внутри карточки */
+.cards-right-blur img {
+    display: block;
+    margin-bottom: 15px; /* Отступ под иконкой */
+}
+
+/* Стили для заголовка в карточке */
+.cards-right-blur span {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Стили для текста в карточке */
+.cards-right-blur p {
+    font-size: 14px;
+    color: #e0e0e0; /* Слегка сероватый цвет для текста */
+}
+
+.carousel-indicators-vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Выравниваем по центру вертикально */
+    gap: 8px; /* Расстояние между точками, как на макете */
+    padding-left: 7px; /* Отступ от карточки */
+}
+
+/* Стили для самих точек */
+.carousel-indicators-vertical button {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.5;
+    border: 1px solid white; /* Добавим рамку, как на макете */
+    background-clip: content-box; /* Важно, чтобы фон не вылезал за рамку */
+    padding: 0;
+}
+
+/* Стиль для активной точки */
+.carousel-indicators-vertical .active {
+    opacity: 1;
+    background-color: #F8AD1F;
+    border-color: #F8AD1F;
+}
+.cards-right-blur--large {
+    min-height: 300px;
+}
+.popular-special-equipment-right{
+    position: absolute;
+    top: 55%;
+    left: 60%;
+}
