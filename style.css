@@ -40,8 +40,33 @@
     width: 200px;
     border: none;
     outline: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
-.popular-special-equipment {
+.btn-primary:hover{
+    background-color:#fff;
+    color: var(--primary-color) !important;
+
+}
+
+.nav-link::after, .price::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.nav-link:hover::after, .price:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+main {
    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/background-traktor.png");
     min-height: 758px; 
     background-size: cover;
@@ -120,73 +145,101 @@
 .cards-right-blur--large {
     min-height: 300px;
 }
-.popular-special-equipment-right{
+.main-right{
     position: absolute;
     top: 55%;
     left: 60%;
 }
 
-.btn-primary {
-    transition: background-color 0.3s ease, color 0.3s ease;
+#carouselExampleControls img{
+    
+    height: 298px;
+    border-radius: 40px;
 }
-
-.btn-primary:hover {
-    background-color: #fff;
-    color: var(--primary-color);
-    border: 1px solid var(--primary-color);
+.card{
+    width: 408px;
+    height: 448px;
+    border-radius: 40px !important;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap:10px
+    
 }
+.special-equipment-btn{
+    font-size: 18px;
+    padding: 15px 30px 15px;
+    border-radius: 40px;
+    background-color: var(--primary-color) !important;
+border: none;
 
-.nav-link, .price {
+}
+.special-equipment-btn:hover{
+color: var(--primary-color) !important;
+background-color: #fff !important;
+}
+.price{
+    font-size: 24px;
+}
+.equipment-name{
+    font-size: 20px;
+}
+.carousel-controls-external {
+    position: absolute; 
+    bottom: 5px;       
+    right: 20%;       
+    display: flex;     
+    gap: 15px;          
+    z-index: 10;  
+}
+.popular-special-equipment{
     position: relative;
-    text-decoration: none;
-    transition: color 0.3s ease;
+}
+/* Сброс стандартных стилей Bootstrap для кнопок вне карусели */
+.carousel-controls-external .carousel-control-prev,
+.carousel-controls-external .carousel-control-next {
+    position: static; /* Убираем абсолютное позиционирование */
+    width: 50px;      /* Задаем фиксированную ширину */
+    height: 50px;     /* и высоту */
+    background-color: #f0f0f0; /* Цвет фона кнопки */
+    border-radius: 50%; /* Делаем кнопки круглыми */
+    opacity: 1; /* Убираем прозрачность */
 }
 
-.nav-link::after, .price::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: var(--primary-color);
-    transform-origin: bottom right;
-    transition: transform 0.3s ease-out;
+/* Меняем цвет иконки "назад" (был белый, стал темно-серый) */
+.carousel-controls-external .carousel-control-prev-icon {
+   background-image: url("./assets/arrow-right.svg");
+    background-size: 50px;
+     transform: scaleX(-1);
 }
 
-.nav-link:hover::after, .price:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
+/* Меняем цвет иконки "вперед" */
+.carousel-controls-external .carousel-control-next-icon {
+    background-image: url("./assets/arrow-right.svg");
+    background-size: 50px;
+
 }
+.carousel-control-prev.disabled,
+.carousel-control-next.disabled {
+    opacity: 0.4; 
+    pointer-events: none;
+}
+.special-equipment-info{
+    font-size: 14px;
+    background-color:#F9F9F9;
+    padding: 5px 10px 5px;
+}
+
+
 
 
 /* ============== MEDIA QUERIES (MEDIUM DEVICES) ============== */
 @media screen and (max-width: 992px) {
-    .navbar-toggler {
-        border: none;
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-    }
-
-    .navbar-toggler:focus {
-        box-shadow: none;
-    }
-
-    .header-bottom-menu .navbar-collapse {
-        background-color: #1A1919;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        padding: 1rem;
-        z-index: 1000;
-    }
-
     .header-bottom-menu .navbar-nav {
-        text-align: center;
-        width: 100%;
+    text-align: center;
+    width: 100%;
     }
-    .popular-special-equipment-right {
+    .main-right {
         position: relative;
         top: auto;
         left: auto;
@@ -204,10 +257,11 @@
         font-size: 32px;
     }
 
-    .popular-special-equipment-left {
+    .main-left {
         text-align: center;
     }
 }
+
 
 /* ============== MEDIA QUERIES (SMALL DEVICES) ============== */
 @media screen and (max-width: 576px) {
@@ -222,28 +276,28 @@
         font-size: 28px;
     }
 
-    .popular-special-equipment-left .d-flex.align-items-center {
+    .main-left .d-flex.align-items-center {
         flex-direction: column;
     }
 
-    .popular-special-equipment-left .d-flex.align-items-center .btn-primary {
+    .main-left .d-flex.align-items-center .btn-primary {
         margin-bottom: 1rem;
         margin-right: 0!important;
     }
-    .popular-special-equipment-right .d-flex.align-items-center{
+    .main-right .d-flex.align-items-center{
         flex-direction: row;
     }
     .cards-right-blur {
         margin: 0 auto;
         max-width: 100%;
     }
-    .popular-special-equipment-right .d-flex {
+    .main-right .d-flex {
         flex-direction: column;
         align-items: center;
         gap: 1rem;
     }
     .carousel-indicators-vertical {
-        flex-direction: row;
+        flex-direction: column;
         padding: 0;
         margin-top: 1rem;
     }
