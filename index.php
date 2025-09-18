@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <?php include 'data.php'; ?>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php echo $meta['title']; ?></title>
+    <meta name="description" content="<?php echo $meta['description']; ?>">
+    <meta name="keywords" content="<?php echo $meta['keywords']; ?>">
+    <link rel="stylesheet" href="style.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+
+<header class="pt-3">
+    <div class="container header-top-contacts mb-3">
+        <div class="row align-items-center justify-content-between">
+
+            <div class="col-md-2 mb-3 mb-md-0">
+                <a href="/">
+                    <img class="logo" src="./assets/logo.jpg" alt="Логотип компании Беркана">
+                </a>
+            </div>
+
+            <div class="col-md-2 d-flex align-items-center mb-3 mb-md-0">
+                <img src="./assets/maps.svg" alt="map icon" class="me-2">
+                <div>
+                    Санкт-Петербург <br>
+                    <small class="text-nowrap">пр-кт Индустриальный, 44/2</small>
+                </div>
+            </div>
+
+            <div class="col-md-2 d-flex align-items-center mb-3 mb-md-0">
+                <img src="./assets/clock.svg" alt="clock icon" class="me-2">
+                <div>
+                    <span class="header-label">пн-вс:</span><br>
+                    <small>c 8:00 до 22:00</small>
+                </div>
+            </div>
+            
+            <div class="col-md-2 d-flex align-items-center mb-3 mb-md-0">
+                <img src="./assets/telephone.svg" class="me-2" alt="telephone icon">
+                <div>
+                    <span class="header-label">Контакты</span> <br>
+                    <a href="tel:+78125616217" class="text-decoration-none text-dark">+7 812 561-62-17</a>
+                </div>
+            </div>
+
+            <div class="col-md-2 d-flex align-items-center mb-3 mb-md-0">
+                <img src="./assets/mail.svg" class="me-2" alt="mail icon">
+                <div>
+                    <span class="header-label">Электронная почта</span> <br>
+                    <a href="mailto:ai@berkana.spb.ru" class="text-decoration-none text-dark">ai@berkana.spb.ru</a>
+                </div>
+            </div>
+
+            <div class="col-md-2 text-md-end mb-3 mb-md-0">
+                 <a href="#"><img src="./assets/telegram.svg" alt="Наш Telegram" class="me-2"></a>
+                 <a href="#"><img src="./assets/whatsapp.svg" alt="Наш WhatsApp"></a>
+            </div>
+
+        </div>
+    </div>
+    <nav class="header-bottom-menu navbar navbar-expand-lg">
+        <div class="container">
+            <div class="dropdown">
+                <a class="btn menu-button text-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="./assets/menu.svg" alt="Menu"> <span>Каталог техники</span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">Действие</a></li>
+                    <li><a class="dropdown-item" href="#">Другое действие</a></li>
+                    <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
+                </ul>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a href="#" class="nav-link text-light">Цены</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-light">Клиентам</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-light">О нас</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-light">Статьи</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-light">Контакты</a></li>
+                    <li class="nav-item"><button class="btn-primary text-light ms-lg-3">Заказать звонок</button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<main class="d-flex align-items-center py-5 position-relative">
+    <div class="container">
+        <div>
+
+            <div class="col-lg-6 main-left align-self-center">
+                <span class="title-primary mb-3 d-block">Современная спецтехника</span>
+                <div class="subtitle text-light fw-bold mb-3">Аренда специальной техники для эффективных решений вашего бизнеса</div>
+                <div class="our-offers mb-4">Мы предлагаем широкий ассортимент спецтехники в аренду, чтобы помочь вам успешно решать задачи в строительстве, ремонте, земельных работах и других сферах.</div>
+                <div class="d-flex align-items-center">
+                    <button class="btn-primary text-light text-decoration-none me-4">Заказать звонок</button>
+                    <a href="#" class="text-light text-decoration-none price">Узнать стоимость <img src="./assets/arrow.svg" alt="Узнать стоимость"></a>
+                </div>
+            </div>
+
+<div class="main-right">
+    <div class="d-flex align-items-center ">
+
+        <div class="d-flex flex-wrap ms- gap-3 align-items-end">
+            <div class="cards-right-blur">
+                <span>Гибкие условия аренды</span>
+                <p>Краткосрочная и долгосрочная аренда, мы подстраиваемся под ваши требования.</p>
+            </div>
+            
+            <div id="cardSlider"  class="carousel slide cards-right-blur cards-right-blur--large" data-bs-ride="carousel" data-bs-interval="3000">
+                <div class="carousel-inner">
+                    <?php foreach ($sliderItems as $index => $item): ?>
+                    <div class="carousel-item <?php echo $index === 0 ? 'active' : ''; ?>">
+                        <?php if (!empty($item['icon'])): ?>
+                        <img src="<?php echo $item['icon']; ?>" alt="<?php echo $item['title']; ?>">
+                        <?php endif; ?>
+                        <span><?php echo $item['title']; ?></span>
+                        <p><?php echo $item['text']; ?></p>
+                    </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-indicators-vertical">
+            <button type="button" data-bs-target="#cardSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#cardSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#cardSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+    </div>
+</div>
+        </div>
+    </div>
+</main >
+<section class="popular-special-equipment py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Популярная спецтехника</h2>
+
+        <div id="carouselExampleControls" data-bs-wrap="false" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <?php
+                $catalogChunks = array_chunk($catalogItems, 3);
+                foreach ($catalogChunks as $index => $chunk):
+                ?>
+                <div class="carousel-item <?php echo $index === 0 ? 'active' : ''; ?>">
+                    <div class="row justify-content-center">
+                        <?php foreach ($chunk as $item): ?>
+                        <div class="col-md-4 mb-3">
+                            <div class="card text-center ">
+                                <img src="<?php echo $item['image']; ?>" class="card-img-top" alt="<?php echo $item['name']; ?>">
+                                <div class="equipment-name fw-bold"><?php echo $item['name']; ?></div>
+                                <div><?php echo $item['dimensions']; ?></div>
+                                <div>от <span class="fw-bold price"><?php echo $item['price']; ?></span> <button class="special-equipment-btn text-light">заказать</button></div>
+                            </div>
+                        </div>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+
+        <div class="carousel-controls-external d-flex justify-content-center align-items-center mt-4">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+    </div>
+</section>
+
+
+<script src="script.js">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>   
+</body>
+</html>
